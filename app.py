@@ -32,11 +32,11 @@ surg_services_files = get_files('Sur')
 ped_files = get_files('PED')
 
 def get_df_unit(unit_files, starting_column):
-    df_unit = pd.read_csv('data\\{0}'.format(unit_files[0][0]))
+    df_unit = pd.read_csv('data//{0}'.format(unit_files[0][0]))
     df_unit = df_unit[df_unit.columns[starting_column:]]
     df_unit.insert(0, 'Year-Month', unit_files[0][1][:7])
     for x in unit_files[1:]:
-        df = pd.read_csv('data\\{0}'.format(x[0]))
+        df = pd.read_csv('data//{0}'.format(x[0]))
         df = df[df.columns[starting_column:]]
         df.insert(0, 'Year-Month', x[1][:7])
         df_unit = df_unit.append(df)
