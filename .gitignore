@@ -1,0 +1,6 @@
+venv/
+venv2/
+.ipynb_checkpoints/
+*.ipynb
+.idea
+
